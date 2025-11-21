@@ -8,9 +8,9 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 
-const posts = (await getCollection("projects")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+const projects = (
+  await getCollection("projects", ({ data }) => data.draft !== true)
+).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
 <!doctype html>
@@ -33,7 +33,7 @@ const posts = (await getCollection("projects")).sort(
         <h2>My Projects</h2>
         <ul>
           {
-            posts.map((post) => (
+            projects.map((post) => (
               <li>
                 <a href={`/projects/${post.id}/`}>
                   {post.data.heroImage && (

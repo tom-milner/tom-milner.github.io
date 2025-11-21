@@ -58,24 +58,29 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
         color: var(--black);
         /* box-shadow: var(--box-shadow); */
         background: rgb(var(--gray-light));
-        border: none;
         border-radius: 50%;
         cursor: pointer;
-        transition: background 0.2s;
+        transition:
+          background 0.2s,
+          color 0.2s;
         position: sticky;
         width: 3em;
-        height: 3em;
+        line-height: 3em;
         left: 2em;
         top: 2em;
+        text-decoration: none;
+        display: block;
+        text-align: center;
       }
       .back-btn:hover {
-        background: rgb(var(--gray-light));
+        background: var(--accent);
+        color: rgb(var(--gray-light));
       }
     </style>
   </head>
 
   <body>
-    <button class="back-btn" onclick="history.back()">←</button>
+    <a class="back-btn" href="/">←</a>
     <main>
       <article>
         <div class="hero-image">

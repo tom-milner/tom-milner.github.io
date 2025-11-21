@@ -1,0 +1,59 @@
+---
+title: 'Inchworm Robot'
+description: 'A cam-based inchworm robot for in-pipe traversal.'
+pubDate: 'Nov 21 2025'
+heroImage: '../../assets/inchworm_robot/optimum_inchworm_bristles.jpeg'
+draft: false
+---
+import { MuxPlayer } from '@mux/mux-player-astro';
+
+
+This was my MSc(Eng) final project, where I designed and prototyped an inchworm robot to traverse fibre-optic cable ducts of 50mm diameter.
+The robot is driven by a cylindrical cam and anisotropic friction, and the final prototype was able to travel 234mm/s, making it the fastest in the literature!
+
+Below is a quick rundown of what the robot does, how it works, and how it performs.
+For more thorough technical details (and maths), the thesis document itself can be found [here](../../../public/inchworm_robot/MSc_Thesis.pdf).
+
+# How It Works
+
+A motor drives a cylindrical cam, which linearly extends and contracts the robot.
+"Bristles" are distributed radially around the robot's chassis at an angle, allowing the robot to slip in one direction - this is called "anisotropic friction".
+As the robot extends and contracts, the front and back modules of the robot grip and release the walls of the pipe in sequence, implementing inchworm motion.
+
+<MuxPlayer
+  playbackId="4pXHExFrmiXqNnC4VAuaNu0100PmWRhK5ei7TwLbbBI500"
+  metadata={{ video_title: 'My Astro Video' }}
+/>
+<br />
+<br />
+<br />
+
+
+
+
+# Cylindrical Cam
+To create the cylindrical cam, a python program was written to generate optimum cam paths to minimise "jerk", which would cause vibration in the robot.
+The python program output was passed into Fusion360 generate a 3D cam model, as shown below. Rotating the cam shaft cuases the cam follower to reciprocate distance L.
+![Cam Design Process](../../assets/inchworm_robot/cam_design_process.png)
+
+# Anisotropic Friction (Bristles)
+The bristles grip and release the pipe walls, allowing the robot to move in one direction - this is what they look like:
+![Bristle Assembly](../../assets/inchworm_robot/bristle_assembly.png)
+![Anisotropic Friction](../../assets/inchworm_robot/anisotropic_friction.png)
+Different materials for the bristles were tested to establish their anisotropic friction ranges, and their affect on the final velocity of the robot, producing the following plot.
+![Bristle Friction Tests](../../assets/inchworm_robot/bristle_anchor_slip.png)
+Bristle assembly C was chosen - more details about the experimentation process can be found in the thesis.
+
+
+# Assembly
+Here are some photos of the design and assembly. The cylindrical cam is mounted in the chassis using integrated linear bearings - more about these in the thesis!
+<br/>
+![Inchworm Design](../../assets/inchworm_robot/inchworm_and_front_back.png)
+_Cross section of the robot in CAD, showing the inner workings and bristle mounts._
+<br/>
+![Closed Inchworm](../../assets/inchworm_robot/closed_inchworm.png)
+_Design of the assembled inchworm._
+<br/>
+![Inchworm Assembly](../../assets/inchworm_robot/inchworm_assembly.png)
+_The half-assembled inchworm robot._
+<br/>

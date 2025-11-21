@@ -8,6 +8,7 @@ const blog = defineCollection({
   schema: ({ image }) =>
     z.object({
       title: z.string(),
+      draft: z.boolean().default(true),
       description: z.string(),
       // Transform string to Date object
       pubDate: z.coerce.date(),
@@ -23,6 +24,7 @@ const projects = defineCollection({
   schema: ({ image }) =>
     z.object({
       title: z.string(),
+      draft: z.boolean().default(true),
       description: z.string(),
       // Transform string to Date object
       pubDate: z.coerce.date(),
