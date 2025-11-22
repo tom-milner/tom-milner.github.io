@@ -1,0 +1,54 @@
+---
+import BackButton from "../components/BackButton.astro";
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <BackButton />
+    <main>
+      <h1>My CV</h1>
+      <p>
+        I'm interested in a few different things - click the job title you're
+        hiring for to get a tailored CV!
+      </p>
+      <h2>
+        <a target="_blank" href="../../../cvs/Tom Milner CV - Mechatronics.pdf"
+          >🤖 Mechatronics / Robotics Engineer</a
+        >
+      </h2>
+      <br />
+      <h2>
+        <a
+          target="_blank"
+          href="../../../cvs/Tom Milner CV - Software Engineer.pdf"
+          >🖥️ Software Engineer</a
+        >
+      </h2>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  main {
+    width: 960px;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  a:hover {
+    color: var(--accent);
+  }
+</style>

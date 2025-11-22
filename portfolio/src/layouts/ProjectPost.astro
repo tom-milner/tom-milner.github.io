@@ -4,7 +4,7 @@ import type { CollectionEntry } from "astro:content";
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import FormattedDate from "../components/FormattedDate.astro";
-
+import BackButton from "../components/BackButton.astro";
 type Props = CollectionEntry<"projects">["data"];
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
@@ -51,36 +51,11 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
       .last-updated-on {
         font-style: italic;
       }
-
-      .back-btn {
-        font-size: 1em;
-        font-family: "Atkinson";
-        color: var(--black);
-        /* box-shadow: var(--box-shadow); */
-        background: rgb(var(--gray-light));
-        border-radius: 50%;
-        cursor: pointer;
-        transition:
-          background 0.2s,
-          color 0.2s;
-        position: sticky;
-        width: 3em;
-        line-height: 3em;
-        left: 2em;
-        top: 2em;
-        text-decoration: none;
-        display: block;
-        text-align: center;
-      }
-      .back-btn:hover {
-        background: var(--accent);
-        color: rgb(var(--gray-light));
-      }
     </style>
   </head>
 
   <body>
-    <a class="back-btn" href="/">←</a>
+    <BackButton />
     <main>
       <article>
         <div class="hero-image">
