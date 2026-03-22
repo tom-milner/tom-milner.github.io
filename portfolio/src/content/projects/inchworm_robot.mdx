@@ -6,6 +6,8 @@ heroImage: '../../assets/inchworm_robot/optimum_inchworm_bristles.jpeg'
 draft: false
 ---
 import { MuxPlayer } from '@mux/mux-player-astro';
+import "../../styles/blog_post.css"
+import { Image } from 'astro:assets';
 
 This is my MSc(Eng) final project, where I designed and prototyped an inchworm robot to traverse fibre-optic cable ducts of 50mm diameter.
 The robot is driven by a cylindrical cam and anisotropic friction, and the final prototype was able to travel 234mm/s, making it the fastest in the literature; see the video below!
@@ -54,8 +56,14 @@ estimated affect of the cam path on the cam followers velocity, acceleration, an
 The plots below show how important this is. When comparing cycloidal and sinusoidal cam paths, the cycloid introduces far more jerk in the follower motion, which will manifest as 
 unwanted vibrations in the robot!
 
-![Cycloidal SVAJ](../../assets/inchworm_robot/Cycloidal_cam_mapped.png)
-![Sinusoidal SVAJ](../../assets/inchworm_robot/Sine_Squared_cam_mapped.png)
+import cycloid from "../../assets/inchworm_robot/Cycloidal_cam_mapped.png"
+import sin from "../../assets/inchworm_robot/Sine_Squared_cam_mapped.png"
+
+{/* <div class='horiz-stack'>  */}
+  <Image src={cycloid} alt="Cycloid Cam Path"/>
+  <Image src={sin} alt="Sinusoidal Cam Path" />
+{/* </div>  */}
+
 _Comparing two cam paths._
 
 However, whilst the SVAJ plots make the cycloidal path look bad, it has a benefit; the follower is *stationary* twice per cam shaft rotation.

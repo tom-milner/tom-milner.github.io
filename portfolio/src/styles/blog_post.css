@@ -1,0 +1,20 @@
+
+.horiz-stack{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-bottom: 1rem;
+}
+
+.prose img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+.small-img {
+    max-height: 300px;
+}

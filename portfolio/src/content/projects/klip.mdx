@@ -1,19 +1,65 @@
 ---
 title: 'Klip'
-description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
+description: 'The houseplant wall hanger for renters.'
 pubDate: 'Jun 19 2024'
-heroImage: '../../assets/blog-placeholder-1.jpg'
-draft: true
+heroImage: '../../assets/klip/sewing_machine_zoomed_out.jpg'
+draft: false
 ---
+import { Image } from 'astro:assets';
+import "../../styles/blog_post.css"
 
-Hello! This is Klip!!!
+# Motivation
+Over the years I've lived in various rental accomodations where there were was always the same rule;
+no permanent alterations could be made to the house (which is fair enough).
+However, as a houseplant fan, I had plans to decorate each house with plants galore!
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet odio leo. Integer est mi, cursus at pellentesque ut, aliquam sit amet dolor. Proin congue turpis ac dui dapibus, a mattis ipsum consectetur. Duis porttitor tristique cursus. Quisque sed nulla vitae ligula aliquam gravida. Donec rhoncus mi a mi placerat, vel auctor diam tempor. In vitae dictum ex. Duis ac aliquam eros. Mauris faucibus pharetra tincidunt.
+I really wanted to hang some plants on the wall, but couldn't find any existing hardware to hang fix them to wall in a way 
+that didn't require any permanent fixings, screws, nails, or tools. Thus, I made Klip!
 
-Phasellus vestibulum eleifend arcu vel vulputate. Nullam pellentesque, lectus nec aliquam ullamcorper, mi ligula fringilla lectus, id rutrum tellus mauris sed enim. Nulla pellentesque risus id tincidunt dapibus. Praesent in ante sed massa suscipit lobortis. Cras fringilla cursus velit, at hendrerit leo vulputate vel. Vestibulum dapibus sapien pulvinar, lobortis risus mollis, lacinia libero. Mauris dolor est, egestas a leo quis, commodo ullamcorper velit.
+# What is Klip?
 
-Donec venenatis ligula vel gravida convallis. Nam imperdiet risus dui, eget tincidunt orci pulvinar non. In sit amet sollicitudin dolor. Duis in felis bibendum lectus faucibus dapibus. Suspendisse lorem velit, rhoncus nec mattis sit amet, posuere sit amet metus. Etiam laoreet sagittis nisi vitae congue. Mauris venenatis eu augue ac fringilla.
+import red_klip from "../../assets/klip/red_klip.jpeg"
+import yellow_klip_front from "../../assets/klip/yellow_klip_front.png"
 
-Aenean consequat vitae mauris ac pharetra. Vivamus iaculis id dolor id mollis. Aenean pharetra mi in nisi tempus, nec rutrum augue rutrum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis tempus porta turpis nec volutpat. Nam quis sem finibus, consequat lorem molestie, varius diam. Fusce vitae massa odio. Vestibulum a faucibus risus. Fusce vel eleifend elit. Duis molestie tempus tortor. Vestibulum imperdiet varius lectus, eu pellentesque est elementum a. Etiam quis metus quam. Etiam felis neque, dapibus non laoreet vel, varius in nisi. Praesent eget porttitor lacus.
+<div class='horiz-stack'>
+<Image src={red_klip} alt="Klip" class="small-img"/>
+<Image src={yellow_klip_front} alt="Klip Assembled" class="small-img"/>
+</div>
+_Klip_
 
-Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean vitae risus vitae orci pellentesque faucibus et eget est. Fusce laoreet maximus commodo. Sed rhoncus felis in nisl tincidunt bibendum. Nulla nibh elit, pharetra sed arcu eget, blandit bibendum nunc. Fusce malesuada volutpat vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed purus arcu, aliquet non neque a, iaculis pretium ex. Phasellus maximus at arcu vitae pretium. Cras accumsan, orci at porttitor egestas, sem ligula varius lorem, ut tempor ligula est sed sem.
+Klip allows you to hang a houseplant on a wall in a renter-friendly fashion, requiring no permanent alterations to your 
+walls. A clip on the front grabs the plant pot, and command strips on the back secure it to the wall. A removeable tray catches any drips.
+
+The command strips can handle up to 8kg, and from all the plants I tested, none were heavier than 3kg, so there's a decent 2.7x safety factor.
+
+Klip works with standard terracotta plant pots, and is mostly invisible behind the pot, making the plants seem like they're floating in air!
+
+# Product Photos
+import sewing_machine from "../../assets/klip/sewing_machine_zoomed_out.jpg"
+import up_close from "../../assets/klip/up_close.jpg"
+
+<Image src={sewing_machine} alt="Klip on a wall." />
+<br/>
+<Image src={up_close} alt="Klip up close." />
+<br/>
+
+# Proof of Concept
+import profile_test from "../../assets/klip/profile_test.png"
+import single_screw from "../../assets/klip/single_screw.png"
+import screw_test from "../../assets/klip/screw_test.png"
+
+<div class='horiz-stack'>
+<Image src={profile_test} alt="Profile test." class='small-img' description="test"/>
+<Image src={single_screw} alt="Single Screw." class='small-img'/>
+<Image src={screw_test} alt="Screw test." class='small-img'/>
+</div>
+
+import hard_at_work from "../../assets/klip/hard_at_work.jpg"
+import screw_clip_test from "../../assets/klip/screw_clip_test.png"
+import plant_with_screw_clip from "../../assets/klip/plant_with_screw_clip.png"
+
+<div class='horiz-stack'>
+<Image src={screw_clip_test} alt="Screw test." class='small-img'/>
+<Image src={plant_with_screw_clip} alt="Single Screw." class='small-img'/>
+</div>
+
