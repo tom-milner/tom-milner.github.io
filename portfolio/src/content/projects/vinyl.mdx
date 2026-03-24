@@ -1,0 +1,57 @@
+---
+title: 'Vinyl'
+description: 'A tactile interaction with your digital music collection.'
+pubDate: 'July 27 2023'
+heroImage: '../../assets/vinyl/vinyl_prototype.png'
+draft: false
+---
+import { Image } from 'astro:assets';
+import "../../styles/blog_post.css"
+import { MuxPlayer } from '@mux/mux-player-astro';
+
+
+# Motivation
+I'm really into music, and I love the idea of having a physical collection of music to rifle through and pick from. However, I don't own a record/cassette/CD player (yet!).
+I also find it really annoying that in order to listen to music, I need to find my phone, connect to a bluetooth speaker, open Spotify, and choose something to play.
+I'm addicted to my phone as it is; I don't want another reason to have to pick it up!
+
+Thus, I came up with "Vinyl".
+
+# What is Vinyl?
+
+<MuxPlayer
+  playbackId="O3agmE9z3502cayDhgJb02kmi00AeSZ9bDnxSVuGK01narU"
+  metadata={{ video_title: 'Vinyl Demo' }}
+/>
+
+Vinyl allows you to interact with your Spotify audio collection as if it were a collection of vinyl records.
+Different “cards” each contain an RFID sticker encoding the Spotify ID of a piece of content (playlist, album, artist, song etc).
+When a card is placed on the player, an ESP32 in the player uses an RFID reader to read the Spotify ID and plays the content through integrated speaker drivers, or a Spotify Connect device on the network.
+
+I designed and printed an enclosure, and pitched the product to a city-wide enterprise competition, where I was awarded £2000 to develop the product further.
+
+I'm still working on this, to this day!
+
+# Photos
+
+import vinyl_cad from "../../assets/vinyl/vinyl_cad.png"
+import vinyl_design from "../../assets/vinyl/vinyl_design.png"
+import vinyl_prototype from "../../assets/vinyl/vinyl_prototype.png"
+import vinyl_electronics from "../../assets/vinyl/electronics.png"
+import vinyl_enclosure from "../../assets/vinyl/vinyl_enclosure.jpg"
+
+<div class='horiz-stack'>
+<Image src={vinyl_design} alt="Vinyl Design" class="small-img"/>
+<Image src={vinyl_cad} alt="Vinyl CAD" class="small-img"/>
+
+</div>
+<div class='horiz-stack'>
+<Image src={vinyl_enclosure} alt="Vinyl Enclosure" class="small-img"/>
+<Image src={vinyl_electronics} alt="Vinyl Electronics" class="small-img"/>
+</div>
+
+<div class='horiz-stack'>
+<Image src={vinyl_prototype} alt="Vinyl Prototype" class="small-img"/> 
+</div>
+
+

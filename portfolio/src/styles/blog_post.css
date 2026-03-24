@@ -18,3 +18,7 @@
 .small-img {
     max-height: 300px;
 }
+.hero-image img {
+    max-height: 60vh;
+    width: auto;
+}
